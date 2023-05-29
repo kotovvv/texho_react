@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import OnlyInStockProductsSwitcher from './OnlyInStockProductsSwitcher'
 import Products from './Products'
+import TypeDisplay from './TypeDisplay'
 import Cookies from 'js-cookie'
 import './asset/home.css'
 import './asset/style.css'
@@ -17,8 +18,18 @@ const App = () => {
 		Cookies.set('onlyInStockProducts', !inStock, { expires: 365 })
 		setInStock(!inStock)
 	}
+	const [inDisplay, setInDisplay] = useState(
+		undefined === Cookies.get('onlyInDisplay')
+		||
+		'lines')
+
+	const switchInDisplay = () => {
+		Cookies.set('onlyInDisplay', inDisplay, { expires: 365 })
+		setInDisplay(inDisplay)
+	}
 
 	return <>
+		<TypeDisplay inDisplay={inDisplay} switchInDisplay={switchInDisplay} container={document.getElementById('type-display-switcher')} />
 		<OnlyInStockProductsSwitcher
 			inStock={inStock}
 			switchInStock={switchInStock}

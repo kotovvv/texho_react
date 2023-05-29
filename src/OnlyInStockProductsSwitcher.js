@@ -1,9 +1,3 @@
-// phpcs:disable Generic.Formatting
-// phpcs:disable Generic.WhiteSpace
-// phpcs:disable PEAR.Functions.FunctionCallSignature
-// phpcs:disable WordPress
-
-
 import React, { memo } from 'react'
 import { createPortal } from 'react-dom'
 import global_tehnokrat from './data/tehnokrat'

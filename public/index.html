@@ -13,23 +13,60 @@
 </head>
 
 <body>
-  <header>
-    <div class="right">
-      <div class="stock-delivery">
-        <div id="only-in-stock-products-switcher"></div>
+  <div class="wrapper wrapper-js" style="padding-bottom: 356px; padding-top: 107px;">
+    <div class="preload" id="preload"></div>
+    <div id="only-in-stock-products-switcher-mobile" style="display:none"></div>
+    <div class="page-title">
+      <div class="container">
+        <div class="page-title-cont">
+          <h1>iPhone 13</h1>
+          <div class="for-product">
+            <div id="type-display-switcher"></div>
+            <div class="sorting">
+              <span>
+                <svg class="icon-sort" width="25" height="25" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.666 13.3333H23.9993" stroke="#343434" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M14.666 18.6667H21.3327" stroke="#343434" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M14.666 24H18.666" stroke="#343434" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M14.666 8H27.9993" stroke="#343434" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M9.33333 25.0833C8.80904 25.6733 7.41357 28 6.66667 28M6.66667 28C5.91976 28 4.52429 25.6733 4 25.0833M6.66667 28V20"
+                    stroke="#343434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M4 6.91667C4.52429 6.32668 5.91976 4 6.66667 4M6.66667 4C7.41357 4 8.80904 6.32668 9.33333 6.91667M6.66667 4V12"
+                    stroke="#343434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                Сортування
+                <svg class="icon-arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 1L5.41075 5.56844C5.6885 5.85612 5.82742 6 6 6C6.17258 6 6.3115 5.85612 6.58925 5.56844L11 1"
+                    stroke="#343434" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <ul>
+                <li><a href="javascript:void(0)">за популярністю</a></li>
+                <li><a href="javascript:void(0)">за зростанням ціни</a></li>
+                <li><a href="javascript:void(0)">за зменшенням ціни</a></li>
+              </ul>
+            </div>
+            <div id="only-in-stock-products-switcher"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
-  <div id="only-in-stock-products-switcher-mobile"></div>
-  <div id="react-app"></div>
-  <div class="product">
-    <div class="container">
-      <div id="widget-product-variation-selector" class="product-item"></div>
-    </div>
+    <div id="react-app"></div>
+    <section class="product">
+      <div class="container">
+        <div id="widget-product-variation-selector" class="product-item"></div>
+      </div>
+    </section>
   </div>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

@@ -8,6 +8,7 @@
 import React from 'react'
 import global_tehnokrat from './data/tehnokrat'
 const tehnokrat = global_tehnokrat
+const dataLayer = {}
 
 const MoreDetailed = ({ productName, productIndex, currentVariation, variationIndex = 0 }) => {
 	const goTo = (e) => {
