@@ -4,7 +4,9 @@ import NotifyProductInStockPopup from './NotifyProductInStockPopup'
 import BlockUI from './BlockUI'
 import BuyInInstallments from './BuyInInstallments'
 import Part from './Part'
+import global_tehnokrat from './data/tehnokrat'
 import jQuery from 'jquery'
+const tehnokrat = global_tehnokrat
 const wc_add_to_cart_params = {}
 
 const classNames = require('classnames')
@@ -20,23 +22,23 @@ const AddToCart = memo(({ productName, currentVariation, inStock }) => {
 	const addToCart = () => {
 		setBlockUI(true)
 
-		window.dataLayer && dataLayer.push({
-			'ecommerce': {
-				'currencyCode': 'UAH',
-				'add': {
-					'products': [{
-						'id': currentVariation.id,
-						'name': currentVariation.title1,
-						'price': currentVariation.priceUAH,
-						'quantity': 1
-					}]
-				}
-			},
-			'event': 'gtm-ee-event',
-			'gtm-ee-event-category': 'Enhanced Ecommerce',
-			'gtm-ee-event-action': 'Adding a Product to a Shopping Cart',
-			'gtm-ee-event-non-interaction': 'False',
-		})
+		// window.dataLayer && dataLayer.push({
+		// 	'ecommerce': {
+		// 		'currencyCode': 'UAH',
+		// 		'add': {
+		// 			'products': [{
+		// 				'id': currentVariation.id,
+		// 				'name': currentVariation.title1,
+		// 				'price': currentVariation.priceUAH,
+		// 				'quantity': 1
+		// 			}]
+		// 		}
+		// 	},
+		// 	'event': 'gtm-ee-event',
+		// 	'gtm-ee-event-category': 'Enhanced Ecommerce',
+		// 	'gtm-ee-event-action': 'Adding a Product to a Shopping Cart',
+		// 	'gtm-ee-event-non-interaction': 'False',
+		// })
 
 		const data = new URLSearchParams({
 			'product_id': currentVariation.id,

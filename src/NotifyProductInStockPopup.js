@@ -10,6 +10,8 @@ import React, { useState } from 'react'
 import { createPortal } from 'react-dom'
 import global_tehnokrat from './data/tehnokrat'
 const tehnokrat = global_tehnokrat
+const wp = {}
+const jQuery = {}
 
 const NotifyProductInStockPopup = ({ productName, currentVariation, closePopup }) => {
 	const headerHeight = jQuery(window).width() < 768 ? jQuery('header').height() : 0

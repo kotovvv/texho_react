@@ -6,7 +6,7 @@
 import React, { memo } from 'react'
 import ProductImage from './ProductImage'
 import MoreDetailed from './MoreDetailed'
-// import AddToCart from './AddToCart'
+import AddToCart from './AddToCart'
 import Selectors from './Selectors'
 import ModelSelector from './ModelSelector'
 import Description from './Description'
@@ -88,7 +88,7 @@ const ProductTemplateWithMultipleAttributes = memo(({
 					setSelectedAttributesValues={select}
 				/>
 
-				{/* <AddToCart productName={productName} currentVariation={currentVariation} inStock={inStock} /> */}
+				<AddToCart productName={productName} currentVariation={currentVariation} inStock={inStock} />
 
 			</div>
 		</div>

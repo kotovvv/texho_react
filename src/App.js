@@ -5,8 +5,8 @@ import Products from './Products'
 import Blocks from './Blocks'
 import TypeDisplay from './TypeDisplay'
 import Cookies from 'js-cookie'
-import './asset/home.css'
-import './asset/style.css'
+// import './asset/home.css'
+// import './asset/style.css'
 
 
 const App = () => {
@@ -21,9 +21,7 @@ const App = () => {
 	}
 
 	const [inDisplay, setInDisplay] = useState(
-		undefined === Cookies.get('onlyInDisplay')
-		||
-		'lines')
+		Cookies.get('onlyInDisplay') ?? 'lines')
 
 	const switchInDisplay = (e) => {
 		Cookies.set('onlyInDisplay', e.target.value, { expires: 365 })
@@ -45,7 +43,6 @@ const App = () => {
 		/>
 		{inDisplay === 'lines' ?
 			<Products
-				inDisplay={inDisplay}
 				inStock={inStock}
 				container={document.getElementById('widget-product-variation-selector')} />
 			:

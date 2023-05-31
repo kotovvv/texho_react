@@ -11,15 +11,15 @@ const Blocks = memo(({ inStock, container }) => {
     Array.prototype.push.apply(all_products, e.variations)
   });
 
-  return createPortal(all_products.map((product, i) => {
+  return createPortal(
+    <div className="all-product">
+      <div className="filter">Filter</div>
+      <div className="product-items">{all_products.map((product, i) => {
 
-    return <ProductCat key={i}
-      productIndex={i}
-      productName={product.name}
-      inStock={inStock}
-
-    />
-  })
+        return <ProductCat key={product.id}
+          product={product} inStock={inStock}
+        />
+      })}</div></div>
     ,
     container
   )

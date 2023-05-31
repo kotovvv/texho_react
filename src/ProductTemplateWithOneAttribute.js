@@ -6,7 +6,7 @@
 import React, { memo } from 'react'
 import ProductImage from './ProductImage'
 import MoreDetailed from './MoreDetailed'
-// import AddToCart from './AddToCart'
+import AddToCart from './AddToCart'
 import Selectors from './Selectors'
 import global_tehnokrat from './data/tehnokrat'
 const tehnokrat = global_tehnokrat
@@ -65,7 +65,7 @@ const ProductTemplateWithOneAttribute = memo(({
 					</div>
 				</div>
 
-				{/* <AddToCart productName={productName} currentVariation={currentVariation} inStock={inStock} /> */}
+				<AddToCart productName={productName} currentVariation={currentVariation} inStock={inStock} />
 
 			</div>
 		</div>

@@ -8,7 +8,7 @@ import React, { useState, useRef } from 'react'
 import Cookies from 'js-cookie'
 import { createPortal } from 'react-dom'
 import ProductImage from './ProductImage'
-// import AddToCart from './AddToCart'
+import AddToCart from './AddToCart'
 import classNames from 'classnames'
 
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
 			{currentVariation.modification && currentVariation.modification.length &&
 				<span>{currentVariation.modification}</span>}
 		</p>
-		{/* <AddToCart productName={currentProduct.name} currentVariation={currentVariation} inStock={inStock} /> */}
+		<AddToCart productName={currentProduct.name} currentVariation={currentVariation} inStock={inStock} />
 		<div dangerouslySetInnerHTML={{ __html: tehnokrat.strings.underProduct }}></div>
 	</div>,
 		document.getElementById('widget-one-product')
