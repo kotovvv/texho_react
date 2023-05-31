@@ -1,8 +1,3 @@
-// phpcs:disable Generic.Formatting
-// phpcs:disable Generic.WhiteSpace
-// phpcs:disable PEAR.Functions.FunctionCallSignature
-// phpcs:disable WordPress
-
 import React, { useRef, memo } from 'react'
 import { createPortal } from 'react-dom'
 import Product from './Product'
@@ -35,6 +30,8 @@ const Products = memo(({ inStock, container }) => {
 		,
 		container
 	)
+
+
 })
 
 export default Products

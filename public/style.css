@@ -6820,7 +6820,7 @@ select {
 	display: none
 }
 
-.page-title .type-display input:checked~label {
+.page-title .type-display input:checked+label {
 	background: #FF5400;
 }
 
