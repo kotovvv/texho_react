@@ -7,7 +7,6 @@ import React, { memo } from 'react'
 import ProductImage from './ProductImage'
 import MoreDetailed from './MoreDetailed'
 import AddToCart from './AddToCart'
-import jQuery from 'jquery'
 import global_tehnokrat from './data/tehnokrat'
 const tehnokrat = global_tehnokrat
 

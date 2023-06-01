@@ -4,12 +4,17 @@ import OnlyInStockProductsSwitcher from './OnlyInStockProductsSwitcher'
 import Products from './Products'
 import Blocks from './Blocks'
 import TypeDisplay from './TypeDisplay'
+import Sort from './Sort'
 import Cookies from 'js-cookie'
 // import './asset/home.css'
 // import './asset/style.css'
 
 
 const App = () => {
+	const [inSort, setInSort] = useState()
+	const switchInSort = (e) => {
+		setInSort(e.target.value)
+	}
 	const [inStock, setInStock] = useState(
 		undefined === Cookies.get('onlyInStockProducts')
 		||
@@ -28,26 +33,34 @@ const App = () => {
 		setInDisplay(e.target.value)
 	}
 
+
 	return <>
 		<TypeDisplay inDisplay={inDisplay} switchInDisplay={switchInDisplay} container={document.getElementById('type-display-switcher')} />
 
-		<OnlyInStockProductsSwitcher
-			inStock={inStock}
-			switchInStock={switchInStock}
-			container={document.getElementById('only-in-stock-products-switcher')}
-		/>
-		<OnlyInStockProductsSwitcher
-			inStock={inStock}
-			switchInStock={switchInStock}
-			container={document.getElementById('only-in-stock-products-switcher-mobile')}
-		/>
+
 		{inDisplay === 'lines' ?
-			<Products
-				inStock={inStock}
-				container={document.getElementById('widget-product-variation-selector')} />
+			<>
+				<OnlyInStockProductsSwitcher
+					inStock={inStock}
+					switchInStock={switchInStock}
+					container={document.getElementById('only-in-stock-products-switcher')}
+				/>
+				<OnlyInStockProductsSwitcher
+					inStock={inStock}
+					switchInStock={switchInStock}
+					container={document.getElementById('only-in-stock-products-switcher-mobile')}
+				/>
+				<Products
+					inStock={inStock}
+					container={document.getElementById('widget-product-variation-selector')} />
+			</>
 			:
-			<Blocks inStock={inStock}
-				container={document.getElementById('widget-product-variation-selector')} />}
+			<>
+				<Sort inSort={inSort} switchInSort={switchInSort} container={document.getElementById('only-in-stock-products-switcher')} />
+				<Blocks inStock={inStock}
+					container={document.getElementById('widget-product-variation-selector')} />
+			</>
+		}
 	</>
 }
 
